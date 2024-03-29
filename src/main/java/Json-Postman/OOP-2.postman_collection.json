@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "44e01e98-8f3d-4fef-bc35-34aba6b32579",
+		"name": "OOP-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32761587"
+	},
+	"item": [
+		{
+			"name": "first.exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/properties/owner_details"
+			},
+			"response": []
+		},
+		{
+			"name": "second-exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/properties/specific_price?minPrice=500000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"properties",
+						"specific_price"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "500000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adress\":\"Olihivska 45\",\r\n    \"price\": 550000,\r\n    \"size\": 20000,\r\n    \"typeId\":{\r\n        \"id\": 2\r\n    },\r\n    \"owner\":{\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/properties/"
+			},
+			"response": []
+		},
+		{
+			"name": "third-exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/owners/2/properties"
+			},
+			"response": []
+		},
+		{
+			"name": "four_exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/get_types"
+			},
+			"response": []
+		},
+		{
+			"name": "five_exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/properties/betweenSize?minSize=3000&maxSize=5000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"properties",
+						"betweenSize"
+					],
+					"query": [
+						{
+							"key": "minSize",
+							"value": "3000"
+						},
+						{
+							"key": "maxSize",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "six_exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/top-three-with-properties"
+			},
+			"response": []
+		},
+		{
+			"name": "seven_exercise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/owners?propertyCount=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"owners"
+					],
+					"query": [
+						{
+							"key": "propertyCount",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
